@@ -53,4 +53,9 @@ public class GuavaCacheService implements CacheService {
     public int getEvictionCount() {
         return evictionCount;
     }
+
+    @Override
+    public int getCacheSize() {
+        return (int) cache.size();
+    }
 }

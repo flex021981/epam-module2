@@ -36,4 +36,11 @@ public interface CacheService {
      * @return the number of evictions
      */
     int getEvictionCount();
+
+    /**
+     * Gets the current size of the cache.
+     *
+     * @return the number of key-value pairs currently in the cache
+     */
+    int getCacheSize();
 }

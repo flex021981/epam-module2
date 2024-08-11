@@ -9,15 +9,20 @@
     <packaging>pom</packaging>
     <modules>
         <module>task.one</module>
+        <module>task.two</module>
+        <module>task.three</module>
+        <module>task.four</module>
     </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <org.junit.jupiter.version>5.10.0</org.junit.jupiter.version>
         <org.projectlombok.version>1.18.24</org.projectlombok.version>
         <org.maven.plugins.version>3.8.1</org.maven.plugins.version>
-        <org.slf4j.version>1.7.30</org.slf4j.version>
+        <ch.qos.logback.version>1.2.13</ch.qos.logback.version>
+        <org.slf4j.version>1.7.36</org.slf4j.version>
         <guava.version>33.2.1-jre</guava.version>
     </properties>
 
@@ -30,18 +35,36 @@
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-jdk14</artifactId>
+            <artifactId>slf4j-api</artifactId>
             <version>${org.slf4j.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${org.slf4j.version}</version>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${ch.qos.logback.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>${guava.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${org.junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${org.junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>${org.junit.jupiter.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
